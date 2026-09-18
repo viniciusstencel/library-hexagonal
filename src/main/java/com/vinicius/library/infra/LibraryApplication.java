@@ -1,4 +1,4 @@
-package com.vinicius.library;
+package com.vinicius.library.infra;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
