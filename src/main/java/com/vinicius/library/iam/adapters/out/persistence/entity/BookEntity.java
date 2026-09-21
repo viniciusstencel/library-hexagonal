@@ -1,4 +1,4 @@
-package com.vinicius.library.adapters.out.persistence.entity;
+package com.vinicius.library.iam.adapters.out.persistence.entity;
 
 import jakarta.persistence.*;
 
