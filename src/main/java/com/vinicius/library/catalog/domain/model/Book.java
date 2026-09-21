@@ -1,4 +1,4 @@
-package com.vinicius.library.iam.domain.model;
+package com.vinicius.library.catalog.domain.model;
 
 import java.util.UUID;
 
