@@ -1,43 +1,31 @@
-package com.vinicius.library.catalog.domain.model;
+package com.vinicius.library.catalog.adapters.dtos.request;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
+import jakarta.validation.constraints.NotBlank;
 
-public class Book {
+public class BookRegistrationRequest {
 
-    private UUID id;
+
     private String isbn;
+
+    @NotBlank
     private String title;
+
+    @NotBlank
     private String author;
+
     private String publisher;
+
     private Integer publishedYear;
-    private LocalDateTime createdAt;
 
-    public Book() {
+    public BookRegistrationRequest() {
     }
 
-    public Book(UUID id, String isbn, String title, String author, String publisher, Integer publishedYear, LocalDateTime createdAt) {
-        this.id = id;
+    public BookRegistrationRequest(String isbn, String title, String author, String publisher, Integer publishedYear) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.publishedYear = publishedYear;
-        this.createdAt = createdAt;
-    }
-
-    // Para Livro Novo
-    public Book(String isbn, String title, String author, String publisher, Integer publishedYear) {
-        this.isbn = isbn;
-        this.title = title;
-        this.author = author;
-        this.publisher = publisher;
-        this.publishedYear = publishedYear;
-        this.createdAt = LocalDateTime.now();
-    }
-
-    public UUID getId() {
-        return id;
     }
 
     public String getIsbn() {
@@ -78,13 +66,5 @@ public class Book {
 
     public void setPublishedYear(Integer publishedYear) {
         this.publishedYear = publishedYear;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
     }
 }
